@@ -1,6 +1,6 @@
 {
   "name": "s2-agent-spatial-social",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "S2 Agent Spatial Social Protocol (SSSP) - Decentralized social networking based on AgentPage and SUNS v3.0.",
   "main": "social_handler.py",
   "scripts": {

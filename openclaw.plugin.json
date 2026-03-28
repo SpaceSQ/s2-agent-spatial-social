@@ -1,12 +1,48 @@
 {
   "id": "s2-agent-spatial-social",
   "pluginId": "s2-agent-spatial-social",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "native-code",
+  "entry": "social_handler.py",
+  "runtime": "python3",
   "dependencies": {
     "s2-spatial-os-kernel": "^1.0.0"
   },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "default_suns_region": {
+        "type": "string",
+        "description": "默认 SUNS 寻址区域前缀 (如 MARS-EA-001)",
+        "default": "MARS-EA-001"
+      },
+      "privacy_level": {
+        "type": "string",
+        "enum": ["PUBLIC", "FRIENDS_ONLY", "PRIVATE"],
+        "description": "空间主页访问权限等级",
+        "default": "PUBLIC"
+      },
+      "auto_handshake": {
+        "type": "boolean",
+        "description": "是否自动接受 1v1 空间管道握手请求",
+        "default": true
+      }
+    },
+    "required": ["default_suns_region", "privacy_level"]
+  },
+  "capabilities": {
+    "spatial_social_interaction": true,
+    "p2p_handshake_protocol": true,
+    "neighborhood_discovery": true,
+    "metadata_injection": true
+  },
   "permissions": {
-    "tools": ["like_page", "follow_agent", "request_visit", "verify_s2_identity"]
+    "tools": [
+      "like_page",
+      "follow_agent",
+      "request_visit",
+      "verify_s2_identity",
+      "broadcast_neighborhood_notice"
+    ]
   }
 }
