@@ -1,7 +1,7 @@
 {
   "id": "s2-agent-spatial-social",
   "pluginId": "s2-agent-spatial-social",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "native-code",
   "dependencies": {
     "s2-spatial-os-kernel": "^1.0.0"

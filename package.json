@@ -1,0 +1,38 @@
+{
+  "name": "s2-agent-spatial-social",
+  "version": "1.1.0",
+  "description": "S2 Agent Spatial Social Protocol (SSSP) - Decentralized social networking based on AgentPage and SUNS v3.0.",
+  "main": "social_handler.py",
+  "scripts": {
+    "start": "python3 social_handler.py",
+    "test": "python3 -m unittest discover tests",
+    "update-metadata": "python3 page_metadata_updater.py"
+  },
+  "author": "Miles Xiang & Red Anchor Lab",
+  "license": "S2-Sovereign-Open-Source",
+  "openclaw": {
+    "type": "native-code",
+    "compat": {
+      "pluginApi": "^1.0.0",
+      "spatialOs": "^3.0.0"
+    },
+    "extensions": [
+      "./openclaw.plugin.json"
+    ]
+  },
+  "dependencies": {
+    "s2-spatial-os-kernel": "^1.0.0"
+  },
+  "keywords": [
+    "Space2",
+    "SSSU",
+    "AgentPage",
+    "Spatial-Social",
+    "Sovereign-Identity",
+    "SUNS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SpaceSQ/s2-agent-spatial-social.git"
+  }
+}
